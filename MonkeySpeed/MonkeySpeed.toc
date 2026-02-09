@@ -1,7 +1,0 @@
-## Interface: 11200
-## Title: MonkeySpeed |cff00ff00Adimo|r Edtion v2.8a
-## Notes: Adds a simple movable speedometer displaying speed as a percentage of run speed. (http://www.toctastic.net/)
-## Author: Trentin (trentin@toctastic.net), Quel, MaxWayborn, Adimo
-## SavedVariables: MonkeySpeedConfig
-MonkeyLibrary\MonkeyLibrary.xml
-MonkeySpeed.xml
