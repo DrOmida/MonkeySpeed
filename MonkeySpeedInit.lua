@@ -25,6 +25,7 @@ MonkeySpeed.m_bVariablesLoaded = false;
 MonkeySpeed.m_strPlayer = "";
 MonkeySpeed.m_vCurrPos = {};
 MonkeySpeed.m_bCalibrate = false;
+MonkeySpeed.m_fLastBaseRate = nil;
 MonkeySpeed.m_iCalibrateButtonWidth = 20;
 MonkeySpeed.m_iCalibrateButtonSpacing = 4;
 MonkeySpeed.m_iFramePadding = 10;

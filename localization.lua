@@ -16,6 +16,7 @@ MONKEYSPEED_DESCRIPTION		= "Displays your speed as a \npercentage of run speed."
 MONKEYSPEED_LOADED			= "|cffffff00" .. MONKEYSPEED_TITLE .. " v" .. MONKEYSPEED_VERSION .. " loaded";
 MONKEYSPEED_OPTIONS1		= "Please install MonkeyBuddy to configure your MonkeySpeed easily.";
 MONKEYSPEED_OPTIONS2		= "\124TInterface\\Icons\\Trade_Engineering:0\124t MonkeyBuddy is currently not installed.";
+MONKEYSPEED_CALIBRATE_TOOLTIP	= "Calibrate speed on 100% movement speed.";
 
 MONKEYSPEED_CONFIRM_RESET	= "Okay to reset " .. MONKEYSPEED_TITLE .. " settings to default values?";
 
@@ -36,6 +37,7 @@ if (GetLocale() == "deDE") then
 	MONKEYSPEED_LOADED			= "|cffffff00" .. MONKEYSPEED_TITLE .. " v" .. MONKEYSPEED_VERSION .. " geladen";
 	MONKEYSPEED_OPTIONS1		= "Bitte installiere MonkeyBuddy um dein MonkeySpeed einzustellen.";
 	MONKEYSPEED_OPTIONS2		= "\124TInterface\\Icons\\Trade_Engineering:0\124t MonkeyBuddy ist derzeit nicht installiert.";
+	MONKEYSPEED_CALIBRATE_TOOLTIP	= "Kalibriere Tempo bei 100% Bewegungsgeschwindigkeit.";
 
 	MONKEYSPEED_CONFIRM_RESET	= "Die Einstellungen von " .. MONKEYSPEED_TITLE .. " wirklich zur\195\188cksetzen?";
 	

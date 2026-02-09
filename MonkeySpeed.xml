@@ -95,6 +95,14 @@
 				</Anchors>
 				<Text>Cal</Text>
 				<Scripts>
+					<OnEnter>
+						GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+						GameTooltip:SetText(MONKEYSPEED_CALIBRATE_TOOLTIP);
+						GameTooltip:Show();
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
 					<OnClick>
 						MonkeySpeedSlash_CmdCalibrate();
 					</OnClick>

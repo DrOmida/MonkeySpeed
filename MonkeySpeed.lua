@@ -230,6 +230,14 @@ function MonkeySpeed_OnUpdate(arg1)
 			end
 
 
+			if (baserate == nil or baserate == 0) then
+				if (MonkeySpeed.m_fLastBaseRate and MonkeySpeed.m_fLastBaseRate ~= 0) then
+					baserate = MonkeySpeed.m_fLastBaseRate;
+				end
+			else
+				MonkeySpeed.m_fLastBaseRate = baserate;
+			end
+
 			if (baserate ~= nil and baserate ~= 0) then
 
 				MonkeySpeed.m_fSpeed = MonkeySpeed_Round(((MonkeySpeed.m_fSpeedDist / MonkeySpeed.m_iDeltaTime) / baserate) * 100);
