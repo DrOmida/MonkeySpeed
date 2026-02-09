@@ -9,8 +9,8 @@
 --]]
 
 -- English
-MONKEYSPEED_TITLE			= "MonkeySpeed";
-MONKEYSPEED_VERSION		= "2.8";
+MONKEYSPEED_TITLE			= "MonkeySpeed |cff00ff00Adimo|r Edtion";
+MONKEYSPEED_VERSION		= "2.8a";
 MONKEYSPEED_TITLE_VERSION	= MONKEYSPEED_TITLE .. " v" .. MONKEYSPEED_VERSION;
 MONKEYSPEED_DESCRIPTION		= "Displays your speed as a \npercentage of run speed.";
 MONKEYSPEED_LOADED			= "|cffffff00" .. MONKEYSPEED_TITLE .. " v" .. MONKEYSPEED_VERSION .. " loaded";

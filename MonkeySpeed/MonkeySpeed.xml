@@ -7,7 +7,7 @@
 
 	<Frame name="MonkeySpeedFrame" frameStrata="HIGH" toplevel="true" enableMouse="true" movable="true" parent="UIParent">
 		<Size>
-			<AbsDimension x="46" y="24"/>
+			<AbsDimension x="70" y="24"/>
 		</Size>
 		<Anchors>
 			<Anchor point="TOP">
@@ -33,15 +33,15 @@
 					<AbsDimension x="36" y="13"/>
 				</Size>
 				<Anchors>
-					<Anchor point="CENTER">
+					<Anchor point="LEFT">
 						<Offset>
-							<AbsDimension x="0" y="0"/>
+							<AbsDimension x="5" y="0"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
 				<Layers>
 					<Layer level="ARTWORK">
-						<Texture name="MonkeySpeedBar" file="Interface\AddOns\MonkeyLibrary\Textures\bar.tga">
+						<Texture name="MonkeySpeedBar" file="Interface\AddOns\MonkeySpeed\MonkeyLibrary\Textures\bar.tga">
 							<Size>
 								<AbsDimension x="36" y="13"/>
 							</Size>
@@ -53,7 +53,7 @@
 					</Layer>
 					
 					<Layer level="OVERLAY">
-						<FontString name="MonkeySpeedText" inherits="MasterFont" font="Interface\AddOns\MonkeyLibrary\Fonts\myriapsc.ttf" >
+						<FontString name="MonkeySpeedText" inherits="MasterFont" font="Interface\AddOns\MonkeySpeed\MonkeyLibrary\Fonts\myriapsc.ttf" >
 							<Size>
 								<AbsDimension x="36" y="13"/>
 							</Size>
@@ -80,6 +80,24 @@
 					<OnMouseUp>
 						MonkeySpeed_OnMouseUp(arg1);
 					</OnMouseUp>
+				</Scripts>
+			</Button>
+			<Button name="MonkeySpeedCalibrateButton" inherits="UIPanelButtonTemplate">
+				<Size>
+					<AbsDimension x="20" y="13"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="MonkeySpeedTextButton" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="4" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Text>Cal</Text>
+				<Scripts>
+					<OnClick>
+						MonkeySpeedSlash_CmdCalibrate();
+					</OnClick>
 				</Scripts>
 			</Button>
 		</Frames>

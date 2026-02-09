@@ -25,6 +25,10 @@ MonkeySpeed.m_bVariablesLoaded = false;
 MonkeySpeed.m_strPlayer = "";
 MonkeySpeed.m_vCurrPos = {};
 MonkeySpeed.m_bCalibrate = false;
+MonkeySpeed.m_iCalibrateButtonWidth = 20;
+MonkeySpeed.m_iCalibrateButtonSpacing = 4;
+MonkeySpeed.m_iFramePadding = 10;
+MonkeySpeed.m_iDisplayMinWidth = 36;
 
 
 function MonkeySpeed_Init()
@@ -68,7 +72,7 @@ function MonkeySpeed_Init()
 			MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_bLocked = false;
 		end
 		if (MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_iFrameWidth == nil) then
-			MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_iFrameWidth = 46;
+			MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_iFrameWidth = 70;
 		end
 		if (MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_bAllowRightClick == nil) then
 			MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_bAllowRightClick = true;
@@ -199,7 +203,7 @@ function MonkeySpeed_ResetConfig()
 	MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_fUpdateRate = 0.5;
 	MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_bDebugMode = false;
 	MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_bLocked = false;
-	MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_iFrameWidth = 46;
+	MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_iFrameWidth = 70;
 	MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_bAllowRightClick = true;
 	
 	-- show or hide the right options

@@ -131,6 +131,9 @@ function MonkeySpeed_OnUpdate(arg1)
 	MonkeySpeed.m_iDeltaTime = MonkeySpeed.m_iDeltaTime + arg1;
 	
 	-- update the speed calculation
+	if (WorldMapFrame == nil or not WorldMapFrame:IsVisible()) then
+		SetMapToCurrentZone();
+	end
 	MonkeySpeed.m_vCurrPos.x, MonkeySpeed.m_vCurrPos.y = GetPlayerMapPosition("player");
 	MonkeySpeed.m_vCurrPos.x = MonkeySpeed.m_vCurrPos.x + 0.0;
 	MonkeySpeed.m_vCurrPos.y = MonkeySpeed.m_vCurrPos.y + 0.0;

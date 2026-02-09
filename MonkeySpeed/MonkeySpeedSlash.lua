@@ -172,12 +172,19 @@ function MonkeySpeedSlash_CmdCalibrate(cmd)
 end
 
 function MonkeySpeedSlash_CmdSetWidth(iWidth)
-	if (iWidth >= 48 and iWidth <= 256) then
-		MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_iFrameWidth = iWidth;
-		MonkeySpeedFrame:SetWidth(MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_iFrameWidth);
-		MonkeySpeedBar:SetWidth(MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_iFrameWidth - 10);
-		--MonkeySpeed_Refresh();
+	local minWidth = MonkeySpeed.m_iDisplayMinWidth + MonkeySpeed.m_iCalibrateButtonWidth + MonkeySpeed.m_iCalibrateButtonSpacing + MonkeySpeed.m_iFramePadding;
+	if (iWidth < minWidth) then
+		iWidth = minWidth;
 	end
+	if (iWidth > 256) then
+		iWidth = 256;
+	end
+	MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_iFrameWidth = iWidth;
+	MonkeySpeedFrame:SetWidth(MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_iFrameWidth);
+	local displayWidth = MonkeySpeedConfig[MonkeySpeed.m_strPlayer].m_iFrameWidth - MonkeySpeed.m_iCalibrateButtonWidth - MonkeySpeed.m_iCalibrateButtonSpacing - MonkeySpeed.m_iFramePadding;
+	MonkeySpeedTextButton:SetWidth(displayWidth);
+	MonkeySpeedBar:SetWidth(displayWidth);
+	MonkeySpeedText:SetWidth(displayWidth);
 	
 	-- check for MonkeyBuddy
 	if (MonkeyBuddySpeedFrame_Refresh ~= nil) then
